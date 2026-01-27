@@ -41,7 +41,13 @@ const Navbar = () => {
 
           <NavLink
             to="/experience"
-            className="px-3 py-1.5 rounded-md text-white hover:text-blue-400 hover:bg-white/10 transition"
+            className={({ isActive }) =>
+              `px-3 py-1.5 rounded-md transition ${
+                isActive
+                  ? "text-blue-400 bg-white/10"
+                  : "text-white hover:text-blue-400 hover:bg-white/10"
+              }`
+            }
           >
             Experience
           </NavLink>
