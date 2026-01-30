@@ -144,8 +144,8 @@ function App() {
 
         {/* ABOUT PAGE */}
         <Route path="/about" element={<About />} />
-        <Route path="/Experience" element={<Experience />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
