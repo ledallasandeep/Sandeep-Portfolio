@@ -4,6 +4,7 @@ import Particles from "./Particles";
 import About from "./About";
 import { Routes, Route } from "react-router-dom";
 import Experience from "./Experience";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -144,6 +145,7 @@ function App() {
         {/* ABOUT PAGE */}
         <Route path="/about" element={<About />} />
         <Route path="/Experience" element={<Experience />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </>
   );
