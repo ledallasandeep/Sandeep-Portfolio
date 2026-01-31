@@ -6,6 +6,8 @@ import { Routes, Route } from "react-router-dom";
 import Experience from "./Experience";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import { NavLink } from "react-router-dom";
+
 function App() {
   return (
     <>
@@ -129,9 +131,11 @@ function App() {
 
                 {/* BUTTONS */}
                 <div className="flex gap-3 mt-8">
-                  <button className="bg-green-500 hover:bg-green-600 text-black font-medium px-4 py-2 rounded-md text-xs">
-                    View Projects
-                  </button>
+                  <NavLink to="/projects">
+                    <button className="bg-green-500 hover:bg-green-600 text-black font-medium px-4 py-2 rounded-md text-xs">
+                      View Projects
+                    </button>
+                  </NavLink>
 
                   <button className="border border-green-500 text-green-400 hover:bg-green-500 hover:text-black font-medium px-4 py-2 rounded-md text-xs transition">
                     Download Resume
