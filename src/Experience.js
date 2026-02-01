@@ -49,7 +49,7 @@ const WorkExperience = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white relative pt-32 overflow-hidden">
-      {/* Particles Background (same as About section) */}
+      {/* Particles Background */}
       <div className="absolute inset-0 z-0">
         <Particles
           particleColors={["#ffffff"]}
@@ -62,6 +62,16 @@ const WorkExperience = () => {
           disableRotation={false}
           pixelRatio={1}
         />
+      </div>
+
+      {/* Heading */}
+      <div className="relative z-10 text-center mb-14">
+        <h1 className="text-3xl md:text-4xl font-bold text-white">
+          My Experience
+        </h1>
+        <p className="text-gray-400 text-sm mt-2">
+          Professional roles and responsibilities
+        </p>
       </div>
 
       {/* Content */}

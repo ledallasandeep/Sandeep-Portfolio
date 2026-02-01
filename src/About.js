@@ -20,18 +20,50 @@ const About = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-5">
-        <h1 className="text-3xl font-bold mb-6">About Me</h1>
+      <div className="relative z-10 max-w-7xl mx-auto px-5">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
+          <p className="text-gray-400 max-w-xl mx-auto">
+            Passionate about creating digital experiences that push the
+            boundaries of what’s possible
+          </p>
+        </div>
 
-        <p className="text-gray-300 mb-10 leading-relaxed">
-          I am a passionate and detail-oriented Frontend Developer with a strong
-          focus on building modern, responsive, and user-friendly web
-          applications. I enjoy transforming ideas and designs into interactive
-          digital experiences that are both visually appealing and highly
-          functional.
-        </p>
+        {/* Main About Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Image Card */}
+          <div className="flex justify-center">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-lg">
+              <img
+                src="/sandeep.jpeg"
+                alt="Ledalla Sandeep"
+                className="w-72 h-80 object-cover rounded-2xl"
+              />
+            </div>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+          {/* Text Content */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+              Hello Again, I’m{" "}
+              <span className="text-green-400">Ledalla Sandeep</span>
+            </h2>
+
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
+              <p className="text-gray-300 leading-relaxed">
+                I am a passionate and detail-oriented Frontend Developer with a
+                strong focus on building modern, responsive, and user-friendly
+                web applications. I enjoy transforming ideas and designs into
+                interactive digital experiences that are both visually appealing
+                and highly functional.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills / Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
               title: "React.js Development",
@@ -48,10 +80,12 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-5 hover:scale-105 transition"
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-center"
             >
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.desc}</p>
+              <h3 className="text-lg font-semibold mb-4">{item.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>

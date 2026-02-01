@@ -7,7 +7,6 @@ const Contact = () => {
       icon: "👤",
       label: "Full Name",
       value: "Ledalla Sandeep",
-      link: null,
     },
     {
       icon: "📱",
@@ -31,13 +30,11 @@ const Contact = () => {
       icon: "🏠",
       label: "Native Place",
       value: "Tandur, Mancherial District",
-      link: null,
     },
     {
       icon: "📍",
       label: "Current Location",
       value: "Uppal, Hyderabad",
-      link: null,
     },
     {
       icon: "💼",
@@ -48,14 +45,14 @@ const Contact = () => {
     {
       icon: "🔗",
       label: "LinkedIn",
-      value: "Ledalla Sandeep",
+      value: "linkedin.com/in/ledalla-sandeep",
       link: "https://www.linkedin.com/in/ledalla-sandeep",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white relative  pt-32 overflow-hidden">
-      {/* Particles Background (ONLY background) */}
+    <div className="min-h-screen bg-slate-900 text-white relative pt-32 overflow-hidden">
+      {/* Particles Background */}
       <div className="absolute inset-0 z-0">
         <Particles
           particleColors={["#ffffff"]}
@@ -71,46 +68,43 @@ const Contact = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-5 space-y-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {contactInfo.map((contact, index) => (
+      <div className="relative z-10 max-w-3xl mx-auto px-5">
+        {/* Heading */}
+        <h1 className="text-4xl font-bold text-center mb-10">Contact Me</h1>
+
+        {/* Single Contact Card */}
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-lg space-y-6">
+          {contactInfo.map((item, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6"
+              className="flex items-start gap-4 border-b border-white/10 pb-4 last:border-b-0 last:pb-0"
             >
-              <div className="flex items-start gap-4">
-                <div className="text-3xl flex-shrink-0">{contact.icon}</div>
+              <div className="text-3xl">{item.icon}</div>
 
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm text-gray-400 mb-1">{contact.label}</p>
+              <div className="flex-1">
+                <p className="text-sm text-gray-400 mb-1">{item.label}</p>
 
-                  {contact.link ? (
-                    <a
-                      href={contact.link}
-                      target={
-                        contact.link.startsWith("http") ? "_blank" : "_self"
-                      }
-                      rel="noopener noreferrer"
-                      className="text-lg font-medium text-white hover:text-blue-400 transition-colors break-words"
-                    >
-                      {contact.value}
-                    </a>
-                  ) : (
-                    <p className="text-lg font-medium text-white break-words">
-                      {contact.value}
-                    </p>
-                  )}
-                </div>
+                {item.link ? (
+                  <a
+                    href={item.link}
+                    target={item.link.startsWith("http") ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
+                    className="text-lg font-medium text-white hover:text-blue-400 transition break-words"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="text-lg font-medium text-white">{item.value}</p>
+                )}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center">
-          <p className="text-gray-400 text-sm">
-            Available for freelance opportunities and full-time positions
-          </p>
-        </div>
+        {/* Footer text */}
+        <p className="text-center text-gray-400 text-sm mt-8">
+          Available for freelance opportunities and full-time positions
+        </p>
       </div>
     </div>
   );
