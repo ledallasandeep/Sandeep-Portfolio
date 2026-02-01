@@ -31,9 +31,9 @@ const About = () => {
         </div>
 
         {/* Main About Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20">
-          {/* Left Side - Image Card */}
-          <div className="flex justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Left Side - Image Card (Vertically Centered) */}
+          <div className="flex justify-center items-center">
             <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-lg">
               <img
                 src="/sandeep.jpeg"
