@@ -75,7 +75,7 @@ const WorkExperience = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-5 space-y-10">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 space-y-10">
         {experiences.map((experience) => (
           <div
             key={experience.id}

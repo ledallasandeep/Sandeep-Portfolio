@@ -81,7 +81,7 @@ const Projects = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-6xl mx-auto px-5 space-y-10">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 space-y-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-3">My Projects</h1>

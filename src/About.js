@@ -20,7 +20,7 @@ const About = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5">
+      <div className="relative z-10 max-w-5xl mx-auto px-5">
         {/* Heading */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>

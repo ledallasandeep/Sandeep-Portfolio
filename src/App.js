@@ -56,7 +56,7 @@ function App() {
       <Navbar />
 
       {/* HOME SECTION */}
-      <section id="home" className="relative min-h-screen pt-32">
+      <section id="home" className="relative min-h-screen pt-32 pb-16">
         {/* Particles */}
         <div className="absolute inset-0 z-0">
           <Particles
@@ -73,37 +73,37 @@ function App() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-5">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+        <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-5xl mx-auto">
+          <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">
             Ledalla Sandeep
           </h1>
 
-          <h2 className="text-lg md:text-xl text-gray-300 mb-2">
+          <h2 className="text-base md:text-xl text-gray-300 mb-2">
             Frontend Developer
           </h2>
 
-          <p className="text-gray-400 text-sm max-w-md mb-10">
+          <p className="text-gray-400 text-xs md:text-sm max-w-sm mb-8">
             Building responsive web experiences with React.js, HTML, and CSS.
           </p>
 
           {/* CORE TECHNOLOGIES */}
-          <h2 className="text-xl font-semibold text-white mb-6">
+          <h2 className="text-lg md:text-xl font-semibold text-white mb-5">
             Core Technologies
           </h2>
 
-          <div className="max-w-6xl w-full mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 px-1">
+          <div className="w-full max-w-4xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {coreTechnologies.map((tech, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-4 text-center shadow"
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-3 text-center shadow"
                 >
-                  <h3 className="text-base font-semibold text-white mb-3">
+                  <h3 className="text-sm md:text-base font-semibold text-white mb-2">
                     {tech.name}
                   </h3>
 
                   <span
-                    className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}
+                    className={`inline-block px-2 md:px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}
                   >
                     {tech.level}
                   </span>
@@ -113,19 +113,19 @@ function App() {
           </div>
 
           {/* BUTTONS */}
-          <div className="flex gap-3 mt-20">
+          <div className="flex gap-3 mt-10 md:mt-16 flex-wrap justify-center">
             <button
               onClick={() =>
                 document
                   .getElementById("projects")
                   .scrollIntoView({ behavior: "smooth" })
               }
-              className="bg-green-500 hover:bg-green-600 text-black font-medium px-4 py-2 rounded-md text-xs"
+              className="bg-green-500 hover:bg-green-600 text-black font-medium px-5 py-2.5 rounded-md text-xs md:text-sm transition-all hover:scale-105"
             >
               View Projects
             </button>
 
-            <button className="border border-green-500 text-green-400 hover:bg-green-500 hover:text-black font-medium px-4 py-2 rounded-md text-xs transition">
+            <button className="border border-green-500 text-green-400 hover:bg-green-500 hover:text-black font-medium px-5 py-2.5 rounded-md text-xs md:text-sm transition-all hover:scale-105">
               Download Resume
             </button>
           </div>

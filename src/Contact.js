@@ -68,7 +68,7 @@ const Contact = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl mx-auto px-5">
+      <div className="relative z-10 max-w-4xl mx-auto px-5 space-y-10">
         {/* Heading */}
         <h1 className="text-4xl font-bold text-center mb-10">Contact Me</h1>
 
