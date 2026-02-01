@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, ZoomIn, ZoomOut, Sun } from "lucide-react";
+import { ZoomIn, ZoomOut, Sun } from "lucide-react";
 
 const Navbar = () => {
   const scrollToSection = (id) => {
