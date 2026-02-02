@@ -50,6 +50,16 @@ function App() {
     },
   ];
 
+  // Download Resume Function
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/Sandeep_Ledalla_Frontend_Developer.pdf";
+    link.download = "Sandeep_Ledalla_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="bg-slate-900 text-white relative overflow-hidden">
       {/* Navbar */}
@@ -125,7 +135,10 @@ function App() {
               View Projects
             </button>
 
-            <button className="border border-green-500 text-green-400 hover:bg-green-500 hover:text-black font-medium px-5 py-2.5 rounded-md text-xs md:text-sm transition-all hover:scale-105">
+            <button
+              onClick={handleDownloadResume}
+              className="border border-green-500 text-green-400 hover:bg-green-500 hover:text-black font-medium px-5 py-2.5 rounded-md text-xs md:text-sm transition-all hover:scale-105"
+            >
               Download Resume
             </button>
           </div>
